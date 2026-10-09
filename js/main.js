@@ -173,9 +173,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div>
                     <h4 class="font-black text-slate-900 dark:text-white mb-4 uppercase tracking-widest text-[11px]">Roadside Services</h4>
                     <ul class="space-y-2.5">
-                        <li><a href="services.html" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Emergency Jump-Start</a></li>
-                        <li><a href="services.html" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Doorstep Battery Swap</a></li>
-                        <li><a href="blog.html" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Automotive Battery Blog</a></li>
+                        <li><a href="services.html#jump_start" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Emergency Jump-Start</a></li>
+                        <li><a href="services.html#battery_swap" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Doorstep Battery Swap</a></li>
+                        <li><a href="services.html#alternator_test" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Alternator & Starter Load Testing</a></li>
                     </ul>
                 </div>
                 <div>
@@ -230,3 +230,11 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(el);
     });
 });
+
+
+// Global 404 redirection guard for broken internal links
+window.addEventListener('error', (e) => {
+    if (e.message && e.message.includes('404')) {
+        window.location.href = '404.html';
+    }
+});``
