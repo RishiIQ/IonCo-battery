@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </nav>
 
                 <div class="flex items-center gap-3">
-                    <button id="rtlToggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-xs font-black uppercase">${htmlElement.getAttribute('dir') === 'rtl' ? '→ RTL' : '← LTR'}</button>
+                    <button id="rtlToggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-xs font-black uppercase">${htmlElement.getAttribute('dir') === 'rtl' ? '→ LTR' : '← RTL'}</button>
                     <button id="themeToggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 flex items-center justify-center">
                         <span class="material-symbols-outlined text-sm">${htmlElement.classList.contains('dark') ? 'light_mode' : 'dark_mode'}</span>
                     </button>
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const newDir = currentIsRtl ? 'ltr' : 'rtl';
             htmlElement.setAttribute('dir', newDir);
             localStorage.setItem('dir', newDir);
-            rtlToggleBtn.textContent = newDir === 'rtl' ? '→ RTL' : '← LTR';
+            rtlToggleBtn.textContent = newDir === 'rtl' ? '→ LTR' : '← RTL';
         });
     }
 
