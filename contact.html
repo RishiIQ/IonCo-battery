@@ -48,7 +48,7 @@
 
         <!-- SECTION 2: METRICS STRIP -->
         <section class="volt-container reveal-on-scroll">
-            <div class="glossy-card p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 grid grid-cols-2 md:grid-cols-4 gap-6 text-center shadow-xl">
+            <div class="glossy-card p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center shadow-xl">
                 <div>
                     <span class="text-3xl sm:text-4xl font-black text-voltAmber-500 font-mono">112 / 100</span>
                     <p class="text-[11px] font-black uppercase tracking-widest text-slate-500 mt-1">Official Emergency Lines</p>
@@ -69,33 +69,48 @@
         </section>
 
         <!-- SECTION 3: DIRECT CONTACT CHANNELS -->
-        <section class="volt-container space-y-12 reveal-on-scroll">
-            <div class="text-center max-w-2xl mx-auto space-y-2">
-                <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Communication Channels</span>
-                <h2 class="text-3xl sm:text-4xl font-black">How Would You Like to Connect?</h2>
-                <p class="text-slate-500 dark:text-neutral-400 text-sm font-medium">Choose your preferred contact method for immediate or scheduled assistance.</p>
+<section class="volt-container space-y-12 reveal-on-scroll">
+    <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Communication Channels</span>
+        <h2 class="text-3xl sm:text-4xl font-black">How Would You Like to Connect?</h2>
+        <p class="text-slate-500 dark:text-neutral-400 text-sm font-medium">Choose your preferred contact method for immediate or scheduled assistance.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <!-- Card 1: Hotline -->
+        <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 flex flex-col justify-between shadow-xl text-center h-full">
+            <div class="space-y-4">
+                <div class="w-14 h-14 rounded-2xl bg-voltAmber-500/10 text-voltAmber-500 flex items-center justify-center font-bold text-xl mx-auto"><i class="fa-solid fa-phone"></i></div>
+                <h3 class="font-black text-xl">Emergency Hotline</h3>
+                <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Immediate assistance for stranded vehicles.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4 shadow-xl text-center">
-                    <div class="w-14 h-14 rounded-2xl bg-voltAmber-500/10 text-voltAmber-500 flex items-center justify-center font-bold text-xl mx-auto"><i class="fa-solid fa-phone"></i></div>
-                    <h3 class="font-black text-xl">Emergency Hotline</h3>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold">Immediate assistance for stranded vehicles.</p>
-                    <a href="tel:112" class="inline-block text-sm font-black text-voltAmber-500 hover:underline pt-2 font-mono">112 / (555) 999-BOLT</a>
-                </div>
-                <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4 shadow-xl text-center">
-                    <div class="w-14 h-14 rounded-2xl bg-voltAmber-500/10 text-voltAmber-500 flex items-center justify-center font-bold text-xl mx-auto"><i class="fa-solid fa-envelope"></i></div>
-                    <h3 class="font-black text-xl">Dispatch Email</h3>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold">For corporate fleet partnerships and invoices.</p>
-                    <a href="mailto:dispatch@IonCo.in" class="inline-block text-sm font-black text-voltAmber-500 hover:underline pt-2 font-mono">dispatch@IonCo.in</a>
-                </div>
-                <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4 shadow-xl text-center">
-                    <div class="w-14 h-14 rounded-2xl bg-voltAmber-500/10 text-voltAmber-500 flex items-center justify-center font-bold text-xl mx-auto"><i class="fa-solid fa-location-dot"></i></div>
-                    <h3 class="font-black text-xl">Headquarters</h3>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold">Main corporate and regional hub office.</p>
-                    <span class="inline-block text-xs font-bold text-slate-700 dark:text-neutral-300 pt-2">Anna Salai, Guindy, Chennai, TN</span>
-                </div>
+            <div class="pt-6 mt-6 border-t border-slate-200/40 dark:border-neutral-800/40">
+                <a href="tel:112" class="inline-block text-sm font-black text-voltAmber-500 hover:underline font-mono">112 / (555) 999-BOLT</a>
             </div>
-        </section>
+        </div>
+        <!-- Card 2: Email -->
+        <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 flex flex-col justify-between shadow-xl text-center h-full">
+            <div class="space-y-4">
+                <div class="w-14 h-14 rounded-2xl bg-voltAmber-500/10 text-voltAmber-500 flex items-center justify-center font-bold text-xl mx-auto"><i class="fa-solid fa-envelope"></i></div>
+                <h3 class="font-black text-xl">Dispatch Email</h3>
+                <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">For corporate fleet partnerships and invoices.</p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-200/40 dark:border-neutral-800/40">
+                <a href="mailto:dispatch@IonCo.in" class="inline-block text-sm font-black text-voltAmber-500 hover:underline font-mono">dispatch@IonCo.in</a>
+            </div>
+        </div>
+        <!-- Card 3: Headquarters -->
+        <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 flex flex-col justify-between shadow-xl text-center h-full">
+            <div class="space-y-4">
+                <div class="w-14 h-14 rounded-2xl bg-voltAmber-500/10 text-voltAmber-500 flex items-center justify-center font-bold text-xl mx-auto"><i class="fa-solid fa-location-dot"></i></div>
+                <h3 class="font-black text-xl">Headquarters</h3>
+                <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Main corporate and regional hub office.</p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-200/40 dark:border-neutral-800/40">
+                <span class="inline-block text-xs font-bold text-slate-700 dark:text-neutral-300">Anna Salai, Guindy, Chennai, TN</span>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- SECTION 4: INTERACTIVE CONTACT & SOS DISPATCH FORM -->
         <section id="dispatch" class="max-w-3xl volt-container reveal-on-scroll">
@@ -167,7 +182,7 @@
                 <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Direct Desk Lines</span>
                 <h2 class="text-3xl sm:text-4xl font-black">Departmental Direct Extensions</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="glossy-card p-6 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-2">
                     <span class="text-xs font-mono font-bold text-voltAmber-500">Ext. 101</span>
                     <h4 class="font-black text-lg">Fleet SaaS Support Desk</h4>

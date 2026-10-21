@@ -126,21 +126,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 3. Inject Responsive Footer HTML with Social Icons & Light/Dark Backgrounds
     const footerContainer = document.getElementById('siteFooterContainer');
-    if (footerContainer) {
+   if (footerContainer) {
         footerContainer.innerHTML = `
         <footer class="bg-slate-100 dark:bg-voltDark-900 text-slate-700 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 py-16 text-xs font-semibold transition-colors duration-300">
-            <div class="volt-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            <div class="volt-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
                 <div class="space-y-4">
                     <div class="flex items-center gap-3 text-slate-900 dark:text-white">
                         <a href="index.html" class="flex items-center gap-3 group shrink-0">
-                    <div class="w-10 h-10 rounded-2xl bg-voltAmber-500/10 border border-voltAmber-500/30 flex items-center justify-center text-voltAmber-500 overflow-hidden">
-                            <img src="https://cdn-icons-png.flaticon.com/512/6823/6823621.png" alt="brand-logo" class="w-6 h-6 object-contain"/>
-                        </div>
-                    <div class="flex flex-col leading-none">
-                        <span class="text-xl font-black tracking-tight">IonCo</span>
-                        <span class="text-[9px] font-black text-voltAmber-500 tracking-widest uppercase mt-0.5">Pro Roadside</span>
-                    </div>
-                </a>
+                            <div class="w-10 h-10 rounded-2xl bg-voltAmber-500/10 border border-voltAmber-500/30 flex items-center justify-center text-voltAmber-500 overflow-hidden">
+                                <img src="https://cdn-icons-png.flaticon.com/512/6823/6823621.png" alt="brand-logo" class="w-6 h-6 object-contain"/>
+                            </div>
+                            <div class="flex flex-col leading-none">
+                                <span class="text-xl font-black tracking-tight">IonCo</span>
+                                <span class="text-[9px] font-black text-voltAmber-500 tracking-widest uppercase mt-0.5">Pro Roadside</span>
+                            </div>
+                        </a>
                     </div>
                     <p class="leading-relaxed text-slate-600 dark:text-slate-400">
                         India's premier on-location car battery delivery, jump-start, and mobile electrical testing network. Guaranteed 30-minute dispatch.
@@ -237,4 +237,4 @@ window.addEventListener('error', (e) => {
     if (e.message && e.message.includes('404')) {
         window.location.href = '404.html';
     }
-});``
+});

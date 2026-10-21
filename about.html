@@ -48,22 +48,22 @@
 
         <!-- SECTION 2: METRICS STRIP -->
         <section class="volt-container reveal-on-scroll">
-            <div class="glossy-card p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 grid grid-cols-2 md:grid-cols-4 gap-6 text-center shadow-xl">
-                <div>
-                    <span class="text-3xl sm:text-4xl font-black text-voltAmber-500 font-mono">2020</span>
-                    <p class="text-[11px] font-black uppercase tracking-widest text-slate-500 mt-1">Founding Year</p>
+            <div class="glossy-card p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 grid md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1 gap-6 text-center shadow-xl items-center">
+                <div class="flex flex-col items-center justify-center p-3">
+                    <span class="text-2xl sm:text-3xl lg:text-4xl font-black text-voltAmber-500 font-mono tracking-tight whitespace-nowrap">2020</span>
+                    <p class="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-slate-500 dark:text-neutral-400 mt-2 whitespace-nowrap">Founding Year</p>
                 </div>
-                <div>
-                    <span class="text-3xl sm:text-4xl font-black text-voltAmber-500 font-mono">15+ Cities</span>
-                    <p class="text-[11px] font-black uppercase tracking-widest text-slate-500 mt-1">Metropolitan Hubs</p>
+                <div class="flex flex-col items-center justify-center p-3">
+                    <span class="text-2xl sm:text-3xl lg:text-4xl font-black text-voltAmber-500 font-mono tracking-tight whitespace-nowrap">15+ Cities</span>
+                    <p class="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-slate-500 dark:text-neutral-400 mt-2 whitespace-nowrap">Metropolitan Hubs</p>
                 </div>
-                <div>
-                    <span class="text-3xl sm:text-4xl font-black text-voltAmber-500 font-mono">200+ Hrs</span>
-                    <p class="text-[11px] font-black uppercase tracking-widest text-slate-500 mt-1">Technician Training</p>
+                <div class="flex flex-col items-center justify-center p-3">
+                    <span class="text-2xl sm:text-3xl lg:text-4xl font-black text-voltAmber-500 font-mono tracking-tight whitespace-nowrap">200+ Hrs</span>
+                    <p class="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-slate-500 dark:text-neutral-400 mt-2 whitespace-nowrap">Technician Training</p>
                 </div>
-                <div>
-                    <span class="text-3xl sm:text-4xl font-black text-voltAmber-500 font-mono">100% Neutral</span>
-                    <p class="text-[11px] font-black uppercase tracking-widest text-slate-500 mt-1">Eco-Core Recycling</p>
+                <div class="flex flex-col items-center justify-center p-3">
+                    <span class="text-2xl sm:text-3xl lg:text-4xl font-black text-voltAmber-500 font-mono tracking-tight whitespace-nowrap">100% Neutral</span>
+                    <p class="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-slate-500 dark:text-neutral-400 mt-2 whitespace-nowrap">Eco-Core Recycling</p>
                 </div>
             </div>
         </section>
@@ -223,29 +223,44 @@
         </section>
 
         <!-- SECTION 9: PRESS & RECOGNITION -->
-        <section class="volt-container space-y-12 reveal-on-scroll">
-            <div class="text-center space-y-2">
-                <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Media Spotlight</span>
-                <h2 class="text-3xl font-black">Recognized for Roadside Innovation</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-3">
-                    <span class="text-xs font-mono font-bold text-voltAmber-500">AutoCar India</span>
-                    <h4 class="font-black text-lg">"Best On-Demand Roadside Service 2025"</h4>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Praised for lightning-fast 30-minute response times and transparent battery pricing.</p>
-                </div>
-                <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-3">
-                    <span class="text-xs font-mono font-bold text-voltAmber-500">Economic Times</span>
-                    <h4 class="font-black text-lg">"Top 50 Logistics Startups to Watch"</h4>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Highlighted for proprietary IoT fleet telemetry and automated dispatch architecture.</p>
-                </div>
-                <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-3">
-                    <span class="text-xs font-mono font-bold text-voltAmber-500">YourStory</span>
-                    <h4 class="font-black text-lg">"Transforming Indian Automotive Aftermarket"</h4>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Featured for eliminating tow truck reliance through doorstep mobile workshops.</p>
+<section class="volt-container space-y-12 reveal-on-scroll">
+    <div class="text-center space-y-2">
+        <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Media Spotlight</span>
+        <h2 class="text-3xl font-black">Recognized for Roadside Innovation</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <!-- Card 1 -->
+        <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 flex flex-col justify-between shadow-xl h-full">
+            <div class="space-y-3">
+                <span class="text-xs font-mono font-bold text-voltAmber-500 uppercase tracking-widest block">AutoCar India</span>
+                <div class="h-24 flex items-start">
+                    <h4 class="font-black text-lg leading-snug">"Best On-Demand Roadside Service 2025"</h4>
                 </div>
             </div>
-        </section>
+            <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed pt-4">Praised for lightning-fast 30-minute response times and transparent battery pricing.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 flex flex-col justify-between shadow-xl h-full">
+            <div class="space-y-3">
+                <span class="text-xs font-mono font-bold text-voltAmber-500 uppercase tracking-widest block">Economic Times</span>
+                <div class="h-24 flex items-start">
+                    <h4 class="font-black text-lg leading-snug">"Top 50 Logistics Startups to Watch"</h4>
+                </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed pt-4">Highlighted for proprietary IoT fleet telemetry and automated dispatch architecture.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 flex flex-col justify-between shadow-xl h-full">
+            <div class="space-y-3">
+                <span class="text-xs font-mono font-bold text-voltAmber-500 uppercase tracking-widest block">YourStory</span>
+                <div class="h-24 flex items-start">
+                    <h4 class="font-black text-lg leading-snug">"Transforming Indian Automotive Aftermarket"</h4>
+                </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed pt-4">Featured for eliminating tow truck reliance through doorstep mobile workshops.</p>
+        </div>
+    </div>
+</section>
 
         <!-- SECTION 10: CALL TO ACTION BANNER -->
         <section class="volt-container reveal-on-scroll">
