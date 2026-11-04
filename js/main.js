@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Theme & RTL Initialization (Applies to Whole Page/Document Element)
     const htmlElement = document.documentElement;
     const savedTheme = localStorage.getItem('theme');
     const savedDir = localStorage.getItem('dir');
@@ -16,72 +15,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-    // 2. Inject Responsive Sticky Header HTML with Click-Controlled Home Dropdown & Fixed Mobile Login
+    // Header Injection
     const headerContainer = document.getElementById('siteHeaderContainer');
     if (headerContainer) {
         headerContainer.innerHTML = `
         <header class="sticky top-0 z-[99999] bg-white/95 dark:bg-voltDark-950/95 backdrop-blur-md border-b border-slate-200 dark:border-neutral-800 transition-all w-full">
             <div class="volt-container flex justify-between items-center h-20">
                 <a href="index.html" class="flex items-center gap-3 group shrink-0">
-                    <div class="w-10 h-10 rounded-2xl bg-voltAmber-500/10 border border-voltAmber-500/30 flex items-center justify-center text-voltAmber-500 overflow-hidden">
-                            <img src="https://cdn-icons-png.flaticon.com/512/6823/6823621.png" alt="brand-logo" class="w-6 h-6 object-contain"/>
-                        </div>
+                    <div class="w-11 h-11 rounded-2xl bg-gray-500/10 border border-gray-500/30 flex items-center justify-center text-voltAmber-500 overflow-hidden shadow-sm">
+                        <img src="./logo.png" alt="logo" class="w-8 h-8 rounded-xl">
+                    </div>
                     <div class="flex flex-col leading-none">
                         <span class="text-xl font-black tracking-tight">IonCo</span>
                         <span class="text-[9px] font-black text-voltAmber-500 tracking-widest uppercase mt-0.5">Pro Roadside</span>
                     </div>
                 </a>
                 
-                <!-- Desktop Navigation (Shown at lg / 1024px and above) -->
-                <nav class="hidden lg:flex items-center space-x-1 bg-slate-100 dark:bg-neutral-900 px-1 mx-1 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800 text-[11px] xl:text-xs font-bold uppercase tracking-wider">
-                    <!-- Home Click-to-Toggle Dropdown Menu -->
+                <nav class="hidden lg:flex items-center space-x-1 bg-slate-100 dark:bg-neutral-900 px-1.5 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800 text-xs font-bold uppercase tracking-wider">
                     <div class="relative" id="desktopHomeDropdown">
-                        <button type="button" id="homeDropdownBtn" class="px-3 xl:px-4 py-2 rounded-full transition-colors flex items-center gap-1.5 cursor-pointer ${currentPage === 'index.html' || currentPage === 'home2.html' || currentPage === '' ? 'bg-voltAmber-500 text-slate-950' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">
+                        <button type="button" id="homeDropdownBtn" class="px-4 py-2 rounded-full transition-colors flex items-center gap-1.5 cursor-pointer ${['index.html', 'home2.html', ''].includes(currentPage) ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">
                             Home <i class="fa-solid fa-chevron-down text-[9px] transition-transform" id="homeChevron"></i>
                         </button>
                         <div id="homeDropdownMenu" class="absolute left-0 mt-2 w-48 bg-white dark:bg-voltDark-950 border border-slate-200 dark:border-neutral-800 rounded-2xl shadow-xl py-2 hidden z-50">
-                            <a href="index.html" class="block px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-slate-100 dark:hover:bg-neutral-900 transition-colors ${currentPage === 'index.html' || currentPage === '' ? 'text-voltAmber-500 font-black' : ''}">Consumer Portal</a>
-                            <a href="home2.html" class="block px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-slate-100 dark:hover:bg-neutral-900 transition-colors ${currentPage === 'home2.html' ? 'text-voltAmber-500 font-black' : ''}">Fleet SaaS</a>
+                            <a href="index.html" class="block px-4 py-2.5 text-xs font-bold uppercase tracking-wider hover:bg-slate-100 dark:hover:bg-neutral-900 transition-colors ${['index.html', ''].includes(currentPage) ? 'text-voltAmber-500 font-black' : ''}">Consumer Portal</a>
+                            <a href="home2.html" class="block px-4 py-2.5 text-xs font-bold uppercase tracking-wider hover:bg-slate-100 dark:hover:bg-neutral-900 transition-colors ${currentPage === 'home2.html' ? 'text-voltAmber-500 font-black' : ''}">Fleet SaaS</a>
                         </div>
                     </div>
-                    <a href="services.html" class="px-3 xl:px-4 py-2 rounded-full transition-colors ${currentPage === 'services.html' ? 'bg-voltAmber-500 text-slate-950' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">Services</a>
-                    <a href="about.html" class="px-3 xl:px-4 py-2 rounded-full transition-colors ${currentPage === 'about.html' ? 'bg-voltAmber-500 text-slate-950' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">About Us</a>
-                    <a href="pricing.html" class="px-3 xl:px-4 py-2 rounded-full transition-colors ${currentPage === 'pricing.html' ? 'bg-voltAmber-500 text-slate-950' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">Pricing</a>
-                    <a href="blog.html" class="px-3 xl:px-4 py-2 rounded-full transition-colors ${currentPage === 'blog.html' ? 'bg-voltAmber-500 text-slate-950' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">Blog</a>
-                    <a href="contact.html" class="px-3 xl:px-4 py-2 rounded-full transition-colors ${currentPage === 'contact.html' ? 'bg-voltAmber-500 text-slate-950' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">Contact</a>
-                    <a href="dashboard.html" class="px-3 xl:px-4 py-2 rounded-full transition-colors ${currentPage === 'dashboard.html' ? 'bg-voltAmber-500 text-slate-950' : 'hover:bg-slate-200 dark:hover:bg-neutral-800 '}">Dashboard</a>
+                    <a href="services.html" class="px-4 py-2 rounded-full transition-colors ${currentPage === 'services.html' ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">Services</a>
+                    <a href="about.html" class="px-4 py-2 rounded-full transition-colors ${currentPage === 'about.html' ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">About Us</a>
+                    <a href="pricing.html" class="px-4 py-2 rounded-full transition-colors ${currentPage === 'pricing.html' ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">Pricing</a>
+                    <a href="blog.html" class="px-4 py-2 rounded-full transition-colors ${currentPage === 'blog.html' ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">Blog</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-full transition-colors ${currentPage === 'contact.html' ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">Contact</a>
+                    <a href="dashboard.html" class="px-4 py-2 rounded-full transition-colors ${currentPage === 'dashboard.html' ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">Dashboard</a>
                 </nav>
 
                 <div class="flex items-center gap-3">
-                    <button id="rtlToggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-xs font-black uppercase">${htmlElement.getAttribute('dir') === 'rtl' ? '→ LTR' : '← RTL'}</button>
-                    <button id="themeToggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-sm">${htmlElement.classList.contains('dark') ? 'light_mode' : 'dark_mode'}</span>
+                    <button id="rtlToggle" class="px-3.5 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-xs font-black uppercase cursor-pointer transition-all hover:border-voltAmber-500">${htmlElement.getAttribute('dir') === 'rtl' ? 'LTR' : 'RTL'}</button>
+                    <button id="themeToggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 flex items-center justify-center cursor-pointer transition-all hover:border-voltAmber-500" aria-label="Toggle Theme">
+                        <span class="material-symbols-outlined text-lg">${htmlElement.classList.contains('dark') ? 'light_mode' : 'dark_mode'}</span>
                     </button>
-                    <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 flex items-center justify-center" aria-label="Toggle Navigation Drawer">
-                        <i class="fa-solid fa-bars"></i>
+                    <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 flex items-center justify-center cursor-pointer" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-sm"></i>
                     </button>
-                    <!-- Login button shown only on desktop -->
                     <a href="login.html" class="hidden lg:inline-flex bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 px-6 py-2.5 rounded-full font-black text-xs uppercase tracking-widest shadow-md transition-all">
                         Login
                     </a>
                 </div>
             </div>
             
-            <!-- Mobile/Tablet Drawer (Shown below lg / 1024px) -->
             <div id="mobileDrawer" class="hidden lg:hidden bg-white dark:bg-voltDark-950 border-b border-slate-200 dark:border-neutral-800 py-6 transition-all shadow-xl absolute w-full left-0 top-20">
                 <div class="volt-container space-y-3">
-                    <!-- Mobile Home Options Accordion -->
                     <div class="space-y-1">
                         <div class="text-[10px] font-black uppercase tracking-widest text-voltAmber-500 px-4 py-1">Home Options</div>
-                        <a href="index.html" class="block font-bold text-xs uppercase tracking-wider py-2 px-6 rounded-xl ${currentPage === 'index.html' || currentPage === '' ? 'bg-voltAmber-500/20 text-voltAmber-500' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Consumer Portal</a>
-                        <a href="home2.html" class="block font-bold text-xs uppercase tracking-wider py-2 px-6 rounded-xl ${currentPage === 'home2.html' ? 'bg-voltAmber-500/20 text-voltAmber-500' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Fleet SaaS</a>
+                        <a href="index.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-6 rounded-xl ${['index.html', ''].includes(currentPage) ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Consumer Portal</a>
+                        <a href="home2.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-6 rounded-xl ${currentPage === 'home2.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Fleet SaaS</a>
                     </div>
-                    <a href="services.html" class="block font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-xl ${currentPage === 'services.html' ? 'bg-voltAmber-500/20 text-voltAmber-500' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Services & Modalities</a>
-                    <a href="about.html" class="block font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-xl ${currentPage === 'about.html' ? 'bg-voltAmber-500/20 text-voltAmber-500' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">About Us</a>
-                    <a href="pricing.html" class="block font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-xl ${currentPage === 'pricing.html' ? 'bg-voltAmber-500/20 text-voltAmber-500' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Pricing & Core Exchange</a>
-                    <a href="blog.html" class="block font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-xl ${currentPage === 'blog.html' ? 'bg-voltAmber-500/20 text-voltAmber-500' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Automotive Blog</a>
-                    <a href="contact.html" class="block font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-xl ${currentPage === 'contact.html' ? 'bg-voltAmber-500/20 text-voltAmber-500' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Contact & Support</a>
-                    <a href="dashboard.html" class="block font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-xl ${currentPage === 'dashboard.html' ? 'bg-voltAmber-500 text-slate-950' : ''}">Dashboard</a>
+                    <a href="services.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'services.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Services</a>
+                    <a href="about.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'about.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">About Us</a>
+                    <a href="pricing.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'pricing.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Pricing</a>
+                    <a href="blog.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'blog.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Blog</a>
+                    <a href="contact.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'contact.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Contact</a>
+                    <a href="dashboard.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'dashboard.html' ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Dashboard</a>
                     <div class="pt-4 border-t border-slate-200 dark:border-neutral-800">
                         <a href="login.html" class="block text-center bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 py-3.5 rounded-full font-black text-xs uppercase tracking-widest shadow-md">
                             Login
@@ -91,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </header>`;
 
-        // Re-bind click event handlers for the dynamically injected elements right after setting innerHTML
         const homeDropdownBtn = document.getElementById('homeDropdownBtn');
         const homeDropdownMenu = document.getElementById('homeDropdownMenu');
         const homeChevron = document.getElementById('homeChevron');
@@ -100,17 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
             homeDropdownBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 homeDropdownMenu.classList.toggle('hidden');
-                if (homeChevron) {
-                    homeChevron.classList.toggle('rotate-180');
-                }
+                if (homeChevron) homeChevron.classList.toggle('rotate-180');
             });
-
             document.addEventListener('click', (e) => {
                 if (!homeDropdownBtn.contains(e.target) && !homeDropdownMenu.contains(e.target)) {
                     homeDropdownMenu.classList.add('hidden');
-                    if (homeChevron) {
-                        homeChevron.classList.remove('rotate-180');
-                    }
+                    if (homeChevron) homeChevron.classList.remove('rotate-180');
                 }
             });
         }
@@ -124,25 +112,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 3. Inject Responsive Footer HTML with Social Icons & Light/Dark Backgrounds
+    // Footer Injection
     const footerContainer = document.getElementById('siteFooterContainer');
-   if (footerContainer) {
+    if (footerContainer) {
         footerContainer.innerHTML = `
         <footer class="bg-slate-100 dark:bg-voltDark-900 text-slate-700 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 py-16 text-xs font-semibold transition-colors duration-300">
-            <div class="volt-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+            <div class="volt-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                 <div class="space-y-4">
-                    <div class="flex items-center gap-3 text-slate-900 dark:text-white">
-                        <a href="index.html" class="flex items-center gap-3 group shrink-0">
-                            <div class="w-10 h-10 rounded-2xl bg-voltAmber-500/10 border border-voltAmber-500/30 flex items-center justify-center text-voltAmber-500 overflow-hidden">
-                                <img src="https://cdn-icons-png.flaticon.com/512/6823/6823621.png" alt="brand-logo" class="w-6 h-6 object-contain"/>
-                            </div>
-                            <div class="flex flex-col leading-none">
-                                <span class="text-xl font-black tracking-tight">IonCo</span>
-                                <span class="text-[9px] font-black text-voltAmber-500 tracking-widest uppercase mt-0.5">Pro Roadside</span>
-                            </div>
-                        </a>
+                    <a href="index.html" class="flex items-center gap-3 group shrink-0">
+                        <div class="w-11 h-11 rounded-2xl bg-gray-500/10 border border-gray-500/30 flex items-center justify-center text-voltAmber-500 overflow-hidden shadow-sm">
+                        <img src="./logo.png" alt="logo" class="w-8 h-8 rounded-xl">
                     </div>
-                    <p class="leading-relaxed text-slate-600 dark:text-slate-400">
+                        <div class="flex flex-col leading-none">
+                            <span class="text-xl font-black tracking-tight text-slate-900 dark:text-white">IonCo</span>
+                            <span class="text-[9px] font-black text-voltAmber-500 tracking-widest uppercase mt-0.5">Pro Roadside</span>
+                        </div>
+                    </a>
+                    <p class="leading-relaxed text-slate-600 dark:text-slate-400 text-xs font-medium">
                         India's premier on-location car battery delivery, jump-start, and mobile electrical testing network. Guaranteed 30-minute dispatch.
                     </p>
                     <div class="flex items-center gap-3 pt-2">
@@ -162,32 +148,32 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div>
                     <h4 class="font-black text-slate-900 dark:text-white mb-4 uppercase tracking-widest text-[11px]">Quick Links</h4>
-                    <ul class="space-y-2.5">
-                        <li><a href="index.html" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Consumer Portal</a></li>
-                        <li><a href="home2.html" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Fleet SaaS</a></li>
-                        <li><a href="services.html" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Services & Modalities</a></li>
-                        <li><a href="pricing.html" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Pricing & Core Exchange</a></li>
-                        <li><a href="dashboard.html" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Customer Dashboard</a></li>
+                    <ul class="space-y-2.5 text-xs font-semibold">
+                        <li><a href="index.html" class="hover:text-voltAmber-500 transition-colors">Consumer Portal</a></li>
+                        <li><a href="home2.html" class="hover:text-voltAmber-500 transition-colors">Fleet SaaS</a></li>
+                        <li><a href="services.html" class="hover:text-voltAmber-500 transition-colors">Services & Modalities</a></li>
+                        <li><a href="pricing.html" class="hover:text-voltAmber-500 transition-colors">Pricing & Core Exchange</a></li>
+                        <li><a href="dashboard.html" class="hover:text-voltAmber-500 transition-colors">Customer Dashboard</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-black text-slate-900 dark:text-white mb-4 uppercase tracking-widest text-[11px]">Roadside Services</h4>
-                    <ul class="space-y-2.5">
-                        <li><a href="services.html#jump_start" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Emergency Jump-Start</a></li>
-                        <li><a href="services.html#battery_swap" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Doorstep Battery Swap</a></li>
-                        <li><a href="services.html#alternator_test" class="hover:text-voltAmber-600 dark:hover:text-voltAmber-400 transition-colors">Alternator & Starter Load Testing</a></li>
+                    <ul class="space-y-2.5 text-xs font-semibold">
+                        <li><a href="services.html#jump_start" class="hover:text-voltAmber-500 transition-colors">Emergency Jump-Start</a></li>
+                        <li><a href="services.html#battery_swap" class="hover:text-voltAmber-500 transition-colors">Doorstep Battery Swap</a></li>
+                        <li><a href="services.html#alternator_test" class="hover:text-voltAmber-500 transition-colors">Alternator & Starter Testing</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-black text-slate-900 dark:text-white mb-4 uppercase tracking-widest text-[11px]">Emergency Dispatch</h4>
-                    <p class="mb-2 text-slate-900 dark:text-white font-bold">Emergency Helpline: 112 / (555) 999-BOLT</p>
-                    <p class="text-slate-600 dark:text-slate-400">Email: dispatch@IonCo.in</p>
-                    <p class="mt-4 text-voltAmber-600 dark:text-voltAmber-400 font-mono font-bold">24/7 Active Mobile Vans</p>
+                    <p class="mb-2 text-slate-900 dark:text-white font-bold text-xs">Helpline: 112 / (555) 999-BOLT</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-xs">Email: dispatch@IonCo.in</p>
+                    <p class="mt-4 text-voltAmber-500 font-mono font-bold text-xs">24/7 Active Mobile Vans</p>
                 </div>
             </div>
-            <div class="volt-container pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center text-slate-500 gap-4">
+            <div class="volt-container pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs gap-4">
                 <p>&copy; 2026 IonCo Roadside Services India. All rights reserved.</p>
-                <div class="flex gap-6">
+                <div class="flex gap-6 font-semibold">
                     <a href="privacy.html" class="hover:text-slate-900 dark:hover:text-white transition-colors">Privacy Policy</a>
                     <a href="terms.html" class="hover:text-slate-900 dark:hover:text-white transition-colors">Terms of Service</a>
                 </div>
@@ -195,17 +181,18 @@ document.addEventListener("DOMContentLoaded", () => {
         </footer>`;
     }
 
-    // 4. Global Interactive Controllers (Theme & RTL persistence across the entire site)
+    // Theme Toggle Controller
     const themeToggleBtn = document.getElementById('themeToggle');
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
             htmlElement.classList.toggle('dark');
             const isDark = htmlElement.classList.contains('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            themeToggleBtn.innerHTML = `<span class="material-symbols-outlined text-sm">${isDark ? 'light_mode' : 'dark_mode'}</span>`;
+            themeToggleBtn.innerHTML = `<span class="material-symbols-outlined text-lg">${isDark ? 'light_mode' : 'dark_mode'}</span>`;
         });
     }
 
+    // RTL Toggle Controller (Fixed: Text only, no broken icon)
     const rtlToggleBtn = document.getElementById('rtlToggle');
     if (rtlToggleBtn) {
         rtlToggleBtn.addEventListener('click', () => {
@@ -213,11 +200,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const newDir = currentIsRtl ? 'ltr' : 'rtl';
             htmlElement.setAttribute('dir', newDir);
             localStorage.setItem('dir', newDir);
-            rtlToggleBtn.textContent = newDir === 'rtl' ? '→ LTR' : '← RTL';
+            rtlToggleBtn.textContent = newDir === 'rtl' ? 'LTR' : 'RTL';
         });
     }
 
-    // Intersection Observer for scroll reveal animations
+    // Scroll Reveal Observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -231,8 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
-// Global 404 redirection guard for broken internal links
+// Global 404 Guard
 window.addEventListener('error', (e) => {
     if (e.message && e.message.includes('404')) {
         window.location.href = '404.html';
