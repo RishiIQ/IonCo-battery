@@ -31,14 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </a>
                 
-                <nav class="hidden lg:flex items-center space-x-1 bg-slate-100 dark:bg-neutral-900 px-1.5 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800 text-xs font-bold uppercase tracking-wider">
+                <nav class="hidden lg:flex items-center space-x-1 bg-slate-100 dark:bg-neutral-900 px-1.5 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800 text-sm font-bold uppercase tracking-wider">
                     <div class="relative" id="desktopHomeDropdown">
                         <button type="button" id="homeDropdownBtn" class="px-4 py-2 rounded-full transition-colors flex items-center gap-1.5 cursor-pointer ${['index.html', 'home2.html', ''].includes(currentPage) ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">
                             Home <i class="fa-solid fa-chevron-down text-[9px] transition-transform" id="homeChevron"></i>
                         </button>
                         <div id="homeDropdownMenu" class="absolute left-0 mt-2 w-48 bg-white dark:bg-voltDark-950 border border-slate-200 dark:border-neutral-800 rounded-2xl shadow-xl py-2 hidden z-50">
-                            <a href="index.html" class="block px-4 py-2.5 text-xs font-bold uppercase tracking-wider hover:bg-slate-100 dark:hover:bg-neutral-900 transition-colors ${['index.html', ''].includes(currentPage) ? 'text-voltAmber-500 font-black' : ''}">Consumer Portal</a>
-                            <a href="home2.html" class="block px-4 py-2.5 text-xs font-bold uppercase tracking-wider hover:bg-slate-100 dark:hover:bg-neutral-900 transition-colors ${currentPage === 'home2.html' ? 'text-voltAmber-500 font-black' : ''}">Fleet SaaS</a>
+                            <a href="index.html" class="block px-4 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-slate-100 dark:hover:bg-neutral-900 transition-colors ${['index.html', ''].includes(currentPage) ? 'text-voltAmber-500 font-black' : ''}">Consumer Portal</a>
+                            <a href="home2.html" class="block px-4 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-slate-100 dark:hover:bg-neutral-900 transition-colors ${currentPage === 'home2.html' ? 'text-voltAmber-500 font-black' : ''}">Fleet SaaS</a>
                         </div>
                     </div>
                     <a href="services.html" class="px-4 py-2 rounded-full transition-colors ${currentPage === 'services.html' ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-200 dark:hover:bg-neutral-800'}">Services</a>
@@ -50,14 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 </nav>
 
                 <div class="flex items-center gap-3">
-                    <button id="rtlToggle" class="px-3.5 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-xs font-black uppercase cursor-pointer transition-all hover:border-voltAmber-500">${htmlElement.getAttribute('dir') === 'rtl' ? 'LTR' : 'RTL'}</button>
+                    <button id="rtlToggle" class="px-3.5 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-sm font-black uppercase cursor-pointer transition-all hover:border-voltAmber-500">${htmlElement.getAttribute('dir') === 'rtl' ? 'LTR' : 'RTL'}</button>
                     <button id="themeToggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 flex items-center justify-center cursor-pointer transition-all hover:border-voltAmber-500" aria-label="Toggle Theme">
                         <span class="material-symbols-outlined text-lg">${htmlElement.classList.contains('dark') ? 'light_mode' : 'dark_mode'}</span>
                     </button>
                     <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-full bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 flex items-center justify-center cursor-pointer" aria-label="Toggle Menu">
                         <i class="fa-solid fa-bars text-sm"></i>
                     </button>
-                    <a href="login.html" class="hidden lg:inline-flex bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 px-6 py-2.5 rounded-full font-black text-xs uppercase tracking-widest shadow-md transition-all">
+                    <a href="login.html" class="hidden lg:inline-flex bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 px-6 py-2.5 rounded-full font-black text-sm uppercase tracking-widest shadow-md transition-all">
                         Login
                     </a>
                 </div>
@@ -67,17 +67,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="volt-container space-y-3">
                     <div class="space-y-1">
                         <div class="text-[10px] font-black uppercase tracking-widest text-voltAmber-500 px-4 py-1">Home Options</div>
-                        <a href="index.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-6 rounded-xl ${['index.html', ''].includes(currentPage) ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Consumer Portal</a>
-                        <a href="home2.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-6 rounded-xl ${currentPage === 'home2.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Fleet SaaS</a>
+                        <a href="index.html" class="block font-bold text-sm uppercase tracking-wider py-2.5 px-6 rounded-xl ${['index.html', ''].includes(currentPage) ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Consumer Portal</a>
+                        <a href="home2.html" class="block font-bold text-sm uppercase tracking-wider py-2.5 px-6 rounded-xl ${currentPage === 'home2.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Fleet SaaS</a>
                     </div>
-                    <a href="services.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'services.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Services</a>
-                    <a href="about.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'about.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">About Us</a>
-                    <a href="pricing.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'pricing.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Pricing</a>
-                    <a href="blog.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'blog.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Blog</a>
-                    <a href="contact.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'contact.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Contact</a>
-                    <a href="dashboard.html" class="block font-bold text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'dashboard.html' ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Dashboard</a>
+                    <a href="services.html" class="block font-bold text-sm uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'services.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Services</a>
+                    <a href="about.html" class="block font-bold text-sm uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'about.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">About Us</a>
+                    <a href="pricing.html" class="block font-bold text-sm uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'pricing.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Pricing</a>
+                    <a href="blog.html" class="block font-bold text-sm uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'blog.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Blog</a>
+                    <a href="contact.html" class="block font-bold text-sm uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'contact.html' ? 'bg-voltAmber-500/20 text-voltAmber-500 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Contact</a>
+                    <a href="dashboard.html" class="block font-bold text-sm uppercase tracking-wider py-2.5 px-4 rounded-xl ${currentPage === 'dashboard.html' ? 'bg-voltAmber-500 text-slate-950 font-black' : 'hover:bg-slate-100 dark:hover:bg-neutral-900'}">Dashboard</a>
                     <div class="pt-4 border-t border-slate-200 dark:border-neutral-800">
-                        <a href="login.html" class="block text-center bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 py-3.5 rounded-full font-black text-xs uppercase tracking-widest shadow-md">
+                        <a href="login.html" class="block text-center bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 py-3.5 rounded-full font-black text-sm uppercase tracking-widest shadow-md">
                             Login
                         </a>
                     </div>
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const footerContainer = document.getElementById('siteFooterContainer');
     if (footerContainer) {
         footerContainer.innerHTML = `
-        <footer class="bg-slate-100 dark:bg-voltDark-900 text-slate-700 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 py-16 text-xs font-semibold transition-colors duration-300">
+        <footer class="bg-slate-100 dark:bg-voltDark-900 text-slate-700 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 py-16 text-sm font-semibold transition-colors duration-300">
             <div class="volt-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                 <div class="space-y-4">
                     <a href="index.html" class="flex items-center gap-3 group shrink-0">
@@ -128,27 +128,27 @@ document.addEventListener("DOMContentLoaded", () => {
                             <span class="text-[9px] font-black text-voltAmber-500 tracking-widest uppercase mt-0.5">Pro Roadside</span>
                         </div>
                     </a>
-                    <p class="leading-relaxed text-slate-600 dark:text-slate-400 text-xs font-medium">
+                    <p class="leading-relaxed text-slate-600 dark:text-slate-400 text-sm font-medium">
                         India's premier on-location car battery delivery, jump-start, and mobile electrical testing network. Guaranteed 30-minute dispatch.
                     </p>
                     <div class="flex items-center gap-3 pt-2">
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 flex items-center justify-center text-slate-700 dark:text-white hover:bg-voltAmber-500 hover:text-slate-950 transition-all shadow-sm" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook-f text-xs"></i>
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 flex items-center justify-center text-slate-700 dark:text-white hover:bg-voltAmber-500 hover:text-slate-950 transition-all shadow-sm" aria-label="Twitter">
-                            <i class="fa-brands fa-x-twitter text-xs"></i>
+                            <i class="fa-brands fa-x-twitter text-sm"></i>
                         </a>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 flex items-center justify-center text-slate-700 dark:text-white hover:bg-voltAmber-500 hover:text-slate-950 transition-all shadow-sm" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram text-xs"></i>
+                            <i class="fa-brands fa-instagram text-sm"></i>
                         </a>
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 flex items-center justify-center text-slate-700 dark:text-white hover:bg-voltAmber-500 hover:text-slate-950 transition-all shadow-sm" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in text-xs"></i>
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
                         </a>
                     </div>
                 </div>
                 <div>
                     <h4 class="font-black text-slate-900 dark:text-white mb-4 uppercase tracking-widest text-[11px]">Quick Links</h4>
-                    <ul class="space-y-2.5 text-xs font-semibold">
+                    <ul class="space-y-2.5 text-sm font-semibold">
                         <li><a href="index.html" class="hover:text-voltAmber-500 transition-colors">Consumer Portal</a></li>
                         <li><a href="home2.html" class="hover:text-voltAmber-500 transition-colors">Fleet SaaS</a></li>
                         <li><a href="services.html" class="hover:text-voltAmber-500 transition-colors">Services & Modalities</a></li>
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div>
                     <h4 class="font-black text-slate-900 dark:text-white mb-4 uppercase tracking-widest text-[11px]">Roadside Services</h4>
-                    <ul class="space-y-2.5 text-xs font-semibold">
+                    <ul class="space-y-2.5 text-sm font-semibold">
                         <li><a href="services.html#jump_start" class="hover:text-voltAmber-500 transition-colors">Emergency Jump-Start</a></li>
                         <li><a href="services.html#battery_swap" class="hover:text-voltAmber-500 transition-colors">Doorstep Battery Swap</a></li>
                         <li><a href="services.html#alternator_test" class="hover:text-voltAmber-500 transition-colors">Alternator & Starter Testing</a></li>
@@ -166,12 +166,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div>
                     <h4 class="font-black text-slate-900 dark:text-white mb-4 uppercase tracking-widest text-[11px]">Emergency Dispatch</h4>
-                    <p class="mb-2 text-slate-900 dark:text-white font-bold text-xs">Helpline: 112 / (555) 999-BOLT</p>
-                    <p class="text-slate-600 dark:text-slate-400 text-xs">Email: dispatch@IonCo.in</p>
-                    <p class="mt-4 text-voltAmber-500 font-mono font-bold text-xs">24/7 Active Mobile Vans</p>
+                    <p class="mb-2 text-slate-900 dark:text-white font-bold text-sm">Helpline: 112 / (555) 999-BOLT</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Email: dispatch@IonCo.in</p>
+                    <p class="mt-4 text-voltAmber-500 font-mono font-bold text-sm">24/7 Active Mobile Vans</p>
                 </div>
             </div>
-            <div class="volt-container pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs gap-4">
+            <div class="volt-container pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm gap-4">
                 <p>&copy; 2026 IonCo Roadside Services India. All rights reserved.</p>
                 <div class="flex gap-6 font-semibold">
                     <a href="privacy.html" class="hover:text-slate-900 dark:hover:text-white transition-colors">Privacy Policy</a>

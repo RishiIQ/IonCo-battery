@@ -34,7 +34,7 @@
         <section class="relative pt-20 pb-32 bg-[linear-gradient(to_right,rgba(4,6,11,0.52),rgba(15,23,42,0.85)),url('https://images.unsplash.com/photo-1676337167752-2062c6ca7366?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D')] bg-cover bg-center text-white">
             <div class="volt-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6 reveal-on-scroll">
-                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-voltAmber-500/20 text-voltAmber-400 border border-voltAmber-500/30 text-xs font-black uppercase tracking-widest">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-voltAmber-500/20 text-voltAmber-400 border border-voltAmber-500/30 text-sm font-black uppercase tracking-widest">
                         <i class="fa-solid fa-bolt animate-bounce"></i> 30-Minute Rapid Mobile Dispatch Across India
                     </span>
                     <h1 class="text-4xl sm:text-7xl font-black tracking-tight leading-[1.05]">
@@ -45,10 +45,10 @@
                         Skip the tow truck and costly garage markups. Certified IonCo engineers arrive at your home, office, or highway location with OEM-certified batteries, heavy-duty jump-starters, and complete electrical diagnostic suites.
                     </p>
                     <div class="flex flex-wrap gap-4 pt-4">
-                        <a href="dashboard.html" class="px-8 py-4 bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 font-black rounded-full uppercase tracking-wider text-xs shadow-lg amber-glow transition-all">
+                        <a href="dashboard.html" class="px-8 py-4 bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 font-black rounded-full uppercase tracking-wider text-sm shadow-lg amber-glow transition-all">
                             Request Emergency SOS Dispatch
                         </a>
-                        <a href="services.html" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-black rounded-full uppercase tracking-wider text-xs backdrop-blur-md transition-all">
+                        <a href="services.html" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-black rounded-full uppercase tracking-wider text-sm backdrop-blur-md transition-all">
                             Explore Service Catalog
                         </a>
                     </div>
@@ -56,22 +56,22 @@
                 <!-- Quick Dispatch Card with Native Validation & Interactive Popup Feedback -->
                 <div class="lg:col-span-5 glossy-card p-6 sm:p-8 rounded-3xl border border-voltAmber-500/30 text-slate-900 dark:text-white reveal-on-scroll shadow-2xl">
                     <h3 class="text-xl sm:text-2xl font-black mb-1">Instant Roadside Booking</h3>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 mb-6 font-bold uppercase tracking-wider">Zero Towing Fees • 5-Year Warranty</p>
+                    <p class="text-sm text-slate-500 dark:text-neutral-400 mb-6 font-bold uppercase tracking-wider">Zero Towing Fees • 5-Year Warranty</p>
                     <form id="heroQuickForm" class="space-y-4" novalidate>
                         <div>
-                            <label class="block text-xs font-black uppercase tracking-widest mb-1 text-slate-600 dark:text-neutral-300">Vehicle Make & Model</label>
-                            <input type="text" id="carModel" placeholder="e.g. Tata Nexon / Honda City" class="w-full px-4 py-3 rounded-2xl bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-xs font-bold uppercase outline-none focus:border-voltAmber-500" required>
+                            <label class="block text-sm font-black uppercase tracking-widest mb-1 text-slate-600 dark:text-neutral-300">Vehicle Make & Model</label>
+                            <input type="text" id="carModel" placeholder="e.g. Tata Nexon / Honda City" class="w-full px-4 py-3 rounded-2xl bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-sm font-bold uppercase outline-none focus:border-voltAmber-500" required>
                             <span class="error-msg">Please enter your vehicle make and model.</span>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-xs font-black uppercase tracking-widest mb-1 text-slate-600 dark:text-neutral-300">Mobile Number</label>
-                                <input type="tel" id="quickPhone" placeholder="9876543210" maxlength="10" inputmode="tel" class="w-full px-4 py-3 rounded-2xl bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-xs font-bold uppercase outline-none focus:border-voltAmber-500" required>
+                                <label class="block text-sm font-black uppercase tracking-widest mb-1 text-slate-600 dark:text-neutral-300">Mobile Number</label>
+                                <input type="tel" id="quickPhone" placeholder="9876543210" maxlength="10" inputmode="tel" class="w-full px-4 py-3 rounded-2xl bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-sm font-bold uppercase outline-none focus:border-voltAmber-500" required>
                                 <span class="error-msg">Enter a valid 10-digit mobile number.</span>
                             </div>
                             <div>
-                                <label class="block text-xs font-black uppercase tracking-widest mb-1 text-slate-600 dark:text-neutral-300">Service Needed</label>
-                                <select id="serviceType" class="w-full px-4 py-3 rounded-2xl bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-xs font-bold uppercase outline-none focus:border-voltAmber-500">
+                                <label class="block text-sm font-black uppercase tracking-widest mb-1 text-slate-600 dark:text-neutral-300">Service Needed</label>
+                                <select id="serviceType" class="w-full px-4 py-3 rounded-2xl bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-sm font-bold uppercase outline-none focus:border-voltAmber-500">
                                     <option value="replacement">Battery Replacement</option>
                                     <option value="jumpstart">Emergency Jump-Start</option>
                                     <option value="alternator">Alternator Health Test</option>
@@ -79,11 +79,11 @@
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-black uppercase tracking-widest mb-1 text-slate-600 dark:text-neutral-300">Location / Landmark</label>
-                            <input type="text" id="locationInput" placeholder="e.g. Anna Nagar 4th Main Road" class="w-full px-4 py-3 rounded-2xl bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-xs font-bold uppercase outline-none focus:border-voltAmber-500" required>
+                            <label class="block text-sm font-black uppercase tracking-widest mb-1 text-slate-600 dark:text-neutral-300">Location / Landmark</label>
+                            <input type="text" id="locationInput" placeholder="e.g. Anna Nagar 4th Main Road" class="w-full px-4 py-3 rounded-2xl bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-sm font-bold uppercase outline-none focus:border-voltAmber-500" required>
                             <span class="error-msg">Please specify your current location or landmark.</span>
                         </div>
-                        <button type="submit" id="dispatchSubmitBtn" class="w-full py-4 bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 rounded-full font-black text-xs uppercase tracking-widest shadow-md transition-all cursor-pointer">
+                        <button type="submit" id="dispatchSubmitBtn" class="w-full py-4 bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 rounded-full font-black text-sm uppercase tracking-widest shadow-md transition-all cursor-pointer">
                             Dispatch Van Now
                         </button>
                     </form>
@@ -116,7 +116,7 @@
         <!-- SECTION 3: INTERACTIVE SYMPTOM DIAGNOSTIC MATRIX -->
 <section class="volt-container space-y-10 reveal-on-scroll">
     <div class="text-center max-w-2xl mx-auto space-y-2">
-        <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Interactive Triage</span>
+        <span class="text-voltAmber-500 text-sm font-black uppercase tracking-widest">Interactive Triage</span>
         <h2 class="text-3xl sm:text-4xl font-black">What is Your Car Doing Right Now?</h2>
         <p class="text-slate-500 dark:text-neutral-400 text-sm font-medium">Select your vehicle's condition for an instant diagnosis by our senior automotive engineers.</p>
     </div>
@@ -128,7 +128,7 @@
                 <p class="text-sm text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">The starter solenoid is receiving low amperage. Your battery cell plates are severely sulfated or shorted.</p>
             </div>
             <div class="pt-2 border-t border-slate-200/50 dark:border-neutral-800/50">
-                <span class="inline-block text-xs font-black text-voltAmber-500 uppercase tracking-widest">Fix: Doorstep Replacement</span>
+                <span class="inline-block text-sm font-black text-voltAmber-500 uppercase tracking-widest">Fix: Doorstep Replacement</span>
             </div>
         </div>
         <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4 shadow-lg hover:border-voltAmber-500 transition-all flex flex-col justify-between">
@@ -138,7 +138,7 @@
                 <p class="text-sm text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">Total power loss usually triggered by loose battery terminal clamps, severe corrosion, or extreme parasitic drain.</p>
             </div>
             <div class="pt-2 border-t border-slate-200/50 dark:border-neutral-800/50">
-                <span class="inline-block text-xs font-black text-voltAmber-500 uppercase tracking-widest">Fix: Terminal Clean & Jump</span>
+                <span class="inline-block text-sm font-black text-voltAmber-500 uppercase tracking-widest">Fix: Terminal Clean & Jump</span>
             </div>
         </div>
         <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4 shadow-lg hover:border-voltAmber-500 transition-all flex flex-col justify-between">
@@ -148,7 +148,7 @@
                 <p class="text-sm text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">Your alternator is struggling to maintain charge or your battery is past its 36-month operational lifecycle.</p>
             </div>
             <div class="pt-2 border-t border-slate-200/50 dark:border-neutral-800/50">
-                <span class="inline-block text-xs font-black text-voltAmber-500 uppercase tracking-widest">Fix: Alternator & Load Test</span>
+                <span class="inline-block text-sm font-black text-voltAmber-500 uppercase tracking-widest">Fix: Alternator & Load Test</span>
             </div>
         </div>
     </div>
@@ -162,7 +162,7 @@
                     <div class="max-w-xl space-y-4 text-white">
                         <span class="px-3 py-1 bg-voltAmber-500 text-slate-950 font-black text-[10px] uppercase tracking-widest rounded-full">Mobile Workshop Fleet</span>
                         <h2 class="text-3xl sm:text-5xl font-black">Fully Equipped Mobile Battery Labs on Wheels</h2>
-                        <p class="text-xs sm:text-sm text-slate-300 font-semibold leading-relaxed">Each IonCo dispatch van carries heavy-duty digital load testers, computerized ECU memory savers, and a complete inventory of OEM batteries for every make and model.</p>
+                        <p class="text-sm sm:text-sm text-slate-300 font-semibold leading-relaxed">Each IonCo dispatch van carries heavy-duty digital load testers, computerized ECU memory savers, and a complete inventory of OEM batteries for every make and model.</p>
                     </div>
                 </div>
             </div>
@@ -171,7 +171,7 @@
         <!-- SECTION 5: CORE CAPABILITIES GRID -->
         <section class="volt-container space-y-12 reveal-on-scroll">
             <div class="text-center space-y-2 max-w-2xl mx-auto">
-                <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Comprehensive Solutions</span>
+                <span class="text-voltAmber-500 text-sm font-black uppercase tracking-widest">Comprehensive Solutions</span>
                 <h2 class="text-3xl sm:text-4xl font-black">Engineered for Absolute Reliability</h2>
                 <p class="text-slate-500 dark:text-neutral-400 text-sm font-medium">Everything your vehicle requires to guarantee flawless ignition in any weather condition.</p>
             </div>
@@ -179,22 +179,22 @@
                 <div class="glossy-card p-6 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-3">
                     <div class="w-10 h-10 rounded-xl bg-voltAmber-500 text-slate-950 flex items-center justify-center font-bold text-sm"><i class="fa-solid fa-battery-full"></i></div>
                     <h4 class="font-black text-lg">OEM Battery Swap</h4>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">Exide, Amaron, Bosch, and Varta batteries delivered and installed with a manufacturer warranty.</p>
+                    <p class="text-sm text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">Exide, Amaron, Bosch, and Varta batteries delivered and installed with a manufacturer warranty.</p>
                 </div>
                 <div class="glossy-card p-6 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-3">
                     <div class="w-10 h-10 rounded-xl bg-voltAmber-500 text-slate-950 flex items-center justify-center font-bold text-sm"><i class="fa-solid fa-car-battery"></i></div>
                     <h4 class="font-black text-lg">Surge-Safe Jump-Start</h4>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">Advanced portable power packs that safely revive dead cells without risking onboard computer surges.</p>
+                    <p class="text-sm text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">Advanced portable power packs that safely revive dead cells without risking onboard computer surges.</p>
                 </div>
                 <div class="glossy-card p-6 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-3">
                     <div class="w-10 h-10 rounded-xl bg-voltAmber-500 text-slate-950 flex items-center justify-center font-bold text-sm"><i class="fa-solid fa-microchip"></i></div>
                     <h4 class="font-black text-lg">ECU Memory Saving</h4>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">We connect OBD-II memory savers during swaps so your radio presets, clock, and engine maps are never lost.</p>
+                    <p class="text-sm text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">We connect OBD-II memory savers during swaps so your radio presets, clock, and engine maps are never lost.</p>
                 </div>
                 <div class="glossy-card p-6 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-3">
                     <div class="w-10 h-10 rounded-xl bg-voltAmber-500 text-slate-950 flex items-center justify-center font-bold text-sm"><i class="fa-solid fa-recycle"></i></div>
                     <h4 class="font-black text-lg">Eco-Core Recycling</h4>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">We take away your old dead battery for safe lead-acid recycling and credit you instant core exchange savings.</p>
+                    <p class="text-sm text-slate-500 dark:text-neutral-400 leading-relaxed font-semibold">We take away your old dead battery for safe lead-acid recycling and credit you instant core exchange savings.</p>
                 </div>
             </div>
         </section>
@@ -202,24 +202,24 @@
         <!-- SECTION 6: STEP-BY-STEP CUSTOMER JOURNEY TIMELINE -->
         <section class="volt-container space-y-12 reveal-on-scroll">
             <div class="text-center max-w-2xl mx-auto space-y-2">
-                <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Seamless Pathway</span>
+                <span class="text-voltAmber-500 text-sm font-black uppercase tracking-widest">Seamless Pathway</span>
                 <h2 class="text-3xl sm:text-4xl font-black">Your 3-Step Roadside Rescue</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4">
-                    <span class="text-xs font-mono text-voltAmber-500 font-bold uppercase tracking-widest">Step 01</span>
+                    <span class="text-sm font-mono text-voltAmber-500 font-bold uppercase tracking-widest">Step 01</span>
                     <h3 class="text-2xl font-black">Request via Web or SOS</h3>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Provide your vehicle model and exact GPS pin or street landmark through our mobile platform.</p>
+                    <p class="text-sm text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Provide your vehicle model and exact GPS pin or street landmark through our mobile platform.</p>
                 </div>
                 <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4">
-                    <span class="text-xs font-mono text-voltAmber-500 font-bold uppercase tracking-widest">Step 02</span>
+                    <span class="text-sm font-mono text-voltAmber-500 font-bold uppercase tracking-widest">Step 02</span>
                     <h3 class="text-2xl font-black">Real-Time Van Tracking</h3>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Watch your assigned technician navigate towards your car with estimated arrival countdown.</p>
+                    <p class="text-sm text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Watch your assigned technician navigate towards your car with estimated arrival countdown.</p>
                 </div>
                 <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4">
-                    <span class="text-xs font-mono text-voltAmber-500 font-bold uppercase tracking-widest">Step 03</span>
+                    <span class="text-sm font-mono text-voltAmber-500 font-bold uppercase tracking-widest">Step 03</span>
                     <h3 class="text-2xl font-black">Tested & Installed</h3>
-                    <p class="text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Technician completes health check, replaces battery, and hands over digital warranty card.</p>
+                    <p class="text-sm text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed">Technician completes health check, replaces battery, and hands over digital warranty card.</p>
                 </div>
             </div>
         </section>
@@ -228,10 +228,10 @@
         <section class="volt-container reveal-on-scroll">
             <div class="glossy-card p-8 sm:p-12 rounded-3xl border border-slate-200 dark:border-neutral-800 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-6 space-y-6">
-                    <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Expert Personnel</span>
+                    <span class="text-voltAmber-500 text-sm font-black uppercase tracking-widest">Expert Personnel</span>
                     <h2 class="text-3xl sm:text-4xl font-black">Trained, Certified Automotive Electricians</h2>
                     <p class="text-slate-600 dark:text-neutral-300 text-sm font-semibold leading-relaxed">Every IonCo technician undergoes 200+ hours of rigorous safety training in high-voltage vehicle architectures, start-stop battery calibration, and on-site customer service.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs font-bold uppercase tracking-wider">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-sm font-bold uppercase tracking-wider">
                         <div class="p-4 rounded-2xl bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800">✓ Background Verified</div>
                         <div class="p-4 rounded-2xl bg-slate-100 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800">✓ Fully Insured & Bonded</div>
                     </div>
@@ -245,7 +245,7 @@
         <!-- SECTION 8: FAQ ACCORDION -->
         <section class="max-w-4xl mx-auto volt-container space-y-8 reveal-on-scroll">
             <div class="text-center space-y-2">
-                <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Help Center</span>
+                <span class="text-voltAmber-500 text-sm font-black uppercase tracking-widest">Help Center</span>
                 <h2 class="text-3xl font-black">Frequently Asked Questions</h2>
             </div>
             <div class="space-y-4">
@@ -254,7 +254,7 @@
                         <span>How fast does the technician reach my location?</span>
                         <i class="fa-solid fa-chevron-down text-voltAmber-500 transition-transform duration-300 faq-icon"></i>
                     </div>
-                    <div class="faq-content hidden pt-3 text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed border-t border-slate-200 dark:border-neutral-800 mt-3">
+                    <div class="faq-content hidden pt-3 text-sm text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed border-t border-slate-200 dark:border-neutral-800 mt-3">
                         Our average response time is between 25 to 35 minutes depending on traffic and weather conditions in your metropolitan sector.
                     </div>
                 </div>
@@ -263,7 +263,7 @@
                         <span>Do I get a warranty with the replacement battery?</span>
                         <i class="fa-solid fa-chevron-down text-voltAmber-500 transition-transform duration-300 faq-icon"></i>
                     </div>
-                    <div class="faq-content hidden pt-3 text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed border-t border-slate-200 dark:border-neutral-800 mt-3">
+                    <div class="faq-content hidden pt-3 text-sm text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed border-t border-slate-200 dark:border-neutral-800 mt-3">
                         Yes! All batteries come with a manufacturer-backed warranty ranging from 36 to 60 months with free doorstep replacement support.
                     </div>
                 </div>
@@ -272,7 +272,7 @@
                         <span>What payment modes are accepted by the technician?</span>
                         <i class="fa-solid fa-chevron-down text-voltAmber-500 transition-transform duration-300 faq-icon"></i>
                     </div>
-                    <div class="faq-content hidden pt-3 text-xs text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed border-t border-slate-200 dark:border-neutral-800 mt-3">
+                    <div class="faq-content hidden pt-3 text-sm text-slate-500 dark:text-neutral-400 font-semibold leading-relaxed border-t border-slate-200 dark:border-neutral-800 mt-3">
                         Our mobile POS terminals accept UPI (Google Pay, PhonePe), credit/debit cards, net banking, and cash upon successful installation.
                     </div>
                 </div>
@@ -282,20 +282,20 @@
     <!-- SECTION 9: CUSTOMER TESTIMONIALS -->
         <section class="volt-container space-y-12 reveal-on-scroll">
             <div class="text-center space-y-2">
-                <span class="text-voltAmber-500 text-xs font-black uppercase tracking-widest">Verified Reviews</span>
+                <span class="text-voltAmber-500 text-sm font-black uppercase tracking-widest">Verified Reviews</span>
                 <h2 class="text-3xl font-black">Trusted by Thousands of Motorists</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Testimonial 1 -->
                 <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4 flex flex-col justify-between">
                     <div class="space-y-4">
-                        <div class="flex text-voltAmber-500 gap-1 text-xs">★★★★★</div>
-                        <p class="text-xs text-slate-600 dark:text-neutral-300 font-semibold leading-relaxed">"My car wouldn't start in the basement parking. Called IonCo and a technician arrived in 25 minutes with a new Amaron battery. Super clean installation!"</p>
+                        <div class="flex text-voltAmber-500 gap-1 text-sm">★★★★★</div>
+                        <p class="text-sm text-slate-600 dark:text-neutral-300 font-semibold leading-relaxed">"My car wouldn't start in the basement parking. Called IonCo and a technician arrived in 25 minutes with a new Amaron battery. Super clean installation!"</p>
                     </div>
                     <div class="pt-4 border-t border-slate-200 dark:border-neutral-800 flex items-center gap-3">
                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" alt="Ramesh Kumar" class="w-10 h-10 rounded-full object-cover border border-voltAmber-500/40">
                         <div>
-                            <strong class="text-xs block font-black">Ramesh Kumar</strong>
+                            <strong class="text-sm block font-black">Ramesh Kumar</strong>
                             <span class="text-[10px] text-slate-400 font-semibold">Hyundai Creta Owner</span>
                         </div>
                     </div>
@@ -304,13 +304,13 @@
                 <!-- Testimonial 2 -->
                 <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4 flex flex-col justify-between">
                     <div class="space-y-4">
-                        <div class="flex text-voltAmber-500 gap-1 text-xs">★★★★★</div>
-                        <p class="text-xs text-slate-600 dark:text-neutral-300 font-semibold leading-relaxed">"Transparent pricing with core exchange discount. No hidden towing fees. Highly recommend their emergency jump-start service."</p>
+                        <div class="flex text-voltAmber-500 gap-1 text-sm">★★★★★</div>
+                        <p class="text-sm text-slate-600 dark:text-neutral-300 font-semibold leading-relaxed">"Transparent pricing with core exchange discount. No hidden towing fees. Highly recommend their emergency jump-start service."</p>
                     </div>
                     <div class="pt-4 border-t border-slate-200 dark:border-neutral-800 flex items-center gap-3">
                         <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150" alt="Priya Sharma" class="w-10 h-10 rounded-full object-cover border border-voltAmber-500/40">
                         <div>
-                            <strong class="text-xs block font-black">Priya Sharma</strong>
+                            <strong class="text-sm block font-black">Priya Sharma</strong>
                             <span class="text-[10px] text-slate-400 font-semibold">Maruti Swift Owner</span>
                         </div>
                     </div>
@@ -319,13 +319,13 @@
                 <!-- Testimonial 3 -->
                 <div class="glossy-card p-8 rounded-3xl border border-slate-200 dark:border-neutral-800 space-y-4 flex flex-col justify-between">
                     <div class="space-y-4">
-                        <div class="flex text-voltAmber-500 gap-1 text-xs">★★★★★</div>
-                        <p class="text-xs text-slate-600 dark:text-neutral-300 font-semibold leading-relaxed">"The ECU memory saver feature is brilliant. None of my radio presets or AC settings were wiped out during the battery swap."</p>
+                        <div class="flex text-voltAmber-500 gap-1 text-sm">★★★★★</div>
+                        <p class="text-sm text-slate-600 dark:text-neutral-300 font-semibold leading-relaxed">"The ECU memory saver feature is brilliant. None of my radio presets or AC settings were wiped out during the battery swap."</p>
                     </div>
                     <div class="pt-4 border-t border-slate-200 dark:border-neutral-800 flex items-center gap-3">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Vikramaditya Rao" class="w-10 h-10 rounded-full object-cover border border-voltAmber-500/40">
                         <div>
-                            <strong class="text-xs block font-black">Vikramaditya Rao</strong>
+                            <strong class="text-sm block font-black">Vikramaditya Rao</strong>
                             <span class="text-[10px] text-slate-400 font-semibold">Honda City Owner</span>
                         </div>
                     </div>
@@ -337,14 +337,14 @@
         <section class="volt-container reveal-on-scroll">
             <div class="volt-gradient p-10 sm:p-16 rounded-3xl text-white shadow-2xl border bg-[linear-gradient(to_right,rgba(4,6,11,0.52),rgba(15,23,42,0.85)),url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWjBQsqheHmaY8Ty7dXWX2sxaJnIVZxwNDFmh3FEGBtVN6q5XspLaAjd0&s=10')] bg-cover bg-center border-voltAmber-500/40 text-center space-y-6 relative overflow-hidden">
                 <div class="absolute -right-20 -top-20 w-60 h-60 bg-voltAmber-500/10 rounded-full blur-3xl"></div>
-                <span class="px-4 py-1.5 bg-voltAmber-500 text-slate-950 font-black text-xs uppercase tracking-widest rounded-full">24/7 Roadside Assistance</span>
+                <span class="px-4 py-1.5 bg-voltAmber-500 text-slate-950 font-black text-sm uppercase tracking-widest rounded-full">24/7 Roadside Assistance</span>
                 <h2 class="text-3xl sm:text-5xl font-black">Stranded with a Dead Battery Right Now?</h2>
                 <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto font-semibold">Our emergency response vans are deployed across your city. Tap below for instant technician dispatch.</p>
                 <div class="pt-4 flex flex-wrap justify-center gap-4">
-                    <a href="dashboard.html" class="px-8 py-4 bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 font-black rounded-full text-xs uppercase tracking-widest shadow-lg transition-all">
+                    <a href="dashboard.html" class="px-8 py-4 bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 font-black rounded-full text-sm uppercase tracking-widest shadow-lg transition-all">
                         Request SOS Van Now
                     </a>
-                    <a href="contact.html" class="px-8 py-4 bg-transparent hover:bg-white/10 border-2 border-white text-white font-black rounded-full text-xs uppercase tracking-widest transition-all">
+                    <a href="contact.html" class="px-8 py-4 bg-transparent hover:bg-white/10 border-2 border-white text-white font-black rounded-full text-sm uppercase tracking-widest transition-all">
                         Call Dispatch Hotline
                     </a>
                 </div>
@@ -361,8 +361,8 @@
         <div class="glossy-card max-w-md w-full p-8 rounded-3xl border border-voltAmber-500/40 text-center space-y-4 shadow-2xl">
             <div class="w-16 h-16 bg-voltAmber-500/20 text-voltAmber-500 rounded-full flex items-center justify-center mx-auto text-3xl font-black">✓</div>
             <h3 class="text-2xl font-black text-slate-900 dark:text-white">Technician Dispatched!</h3>
-            <p id="modalDispatchText" class="text-xs text-slate-600 dark:text-neutral-300 font-semibold leading-relaxed"></p>
-            <button type="button" id="closeModalBtn" class="w-full py-3.5 bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 rounded-full font-black text-xs uppercase tracking-widest cursor-pointer transition-all">
+            <p id="modalDispatchText" class="text-sm text-slate-600 dark:text-neutral-300 font-semibold leading-relaxed"></p>
+            <button type="button" id="closeModalBtn" class="w-full py-3.5 bg-voltAmber-500 hover:bg-voltAmber-600 text-slate-950 rounded-full font-black text-sm uppercase tracking-widest cursor-pointer transition-all">
                 Close & Track Live Status
             </button>
         </div>
